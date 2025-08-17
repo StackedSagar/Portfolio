@@ -1,41 +1,632 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stacked Sagar | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>Hi, I'm Sagar 👋</h1>
-    <p>Full Stack Developer | .NET • React • SQL</p>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Stacked Sagar" />
+		<meta name="description" content="" />
+		<title>Stacked Sagar | Portfolio</title>
 
-  <main>
-    <section class="intro">
-      <h2>🚀 Welcome to My Portfolio</h2>
-      <p>I build scalable applications and clean UIs, passionate about solving problems and learning new tech.</p>
-    </section>
+		<!-- FavIcon -->
+		<link rel="shortcut icon" href="assets/img/favicon.ico" type="image/ico" />
 
-    <section class="highlights">
-      <h2>Featured Projects</h2>
-      <ul>
-        <li><a href="projects.html">Task Manager App</a></li>
-        <li><a href="projects.html">E-Commerce Platform</a></li>
-        <li><a href="projects.html">Portfolio Website</a></li>
-      </ul>
-    </section>
-  </main>
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet" />
 
-  <footer>
-    <p>© 2025 Sagar Sharma | <a href="https://github.com/StackedSagar">GitHub</a> | <a href="https://linkedin.com/in/StackedSagar">LinkedIn</a></p>
-  </footer>
-</body>
+		<!-- Stylesheets Start-->
+		<link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/theme.css" />
+		<!-- Stylesheets End-->
+	</head>
+	<body class="index-page" data-aos-easing="ease-in-out" data-aos-duration="600" data-aos-delay="0">
+		<!-- PreLoader -->
+		<div class="preloader"></div>
+
+		<!--Main Header Start -->
+		<div id="header" class="header dark-background d-flex flex-column justify-content-center">
+			<i class="header-toggle d-xl-none lni lni-menu-hamburger-1"></i>
+			<div class="header-container d-flex flex-column align-items-start">
+				<nav id="navmenu" class="navmenu">
+					<ul>
+						<li>
+							<a href="#main-profile" class="active"><i class="lni lni-home-2 navicon"></i>Home</a>
+						</li>
+						<li>
+							<a href="#about"><i class="lni lni-user-4 navicon"></i> About</a>
+						</li>
+						<li>
+							<a href="#resume"><i class="lni lni-file-multiple navicon"></i> Resume</a>
+						</li>
+						<!-- <li>
+							<a href="#portfolio"><i class="lni lni-id-card navicon"></i> Portfolio</a>
+						</li> -->
+						<li>
+							<a href="#services"><i class="lni lni-jamstack navicon"></i> Services</a>
+						</li>
+						<li>
+							<a href="#contact"><i class="lni lni-envelope-1 navicon"></i> Contact</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="social-links text-center">
+					<a href="https://x.com/StackedSagar" target="_blank" class="twitter"><i class="lni lni-x"></i></a>
+					<a href="https://www.instagram.com/stackedsagar/" target="_blank" class="instagram"><i class="lni lni-instagram"></i></a>
+					<a href="https://stackoverflow.com/users/31287489/sagar-sharma?tab=profile" target="_blank" class="facebook"><i class="lni lni-stackoverflow"></i></a>
+					<a href="https://stackedsagar.blogspot.com/" target="_blank" class="google-plus"><i class="lni lni-blogger"></i></a>
+					<a href="https://www.linkedin.com/in/stackedsagar/" target="_blank" class="linkedin"><i class="lni lni-linkedin"></i></a>
+				</div>
+			</div>
+		</div>
+		<div class="main">
+			<div id="main-profile" class="main-profile segments">
+				<div class="background-elements">
+					<div class="bg-circle circle-1"></div>
+					<div class="bg-circle circle-2"></div>
+				</div>
+				<div class="main-profile-content">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="col-lg-6 aos-init aos-animate" data-aos="fade-right" data-aos-delay="100">
+								<div class="main-profile-text">
+									<h1>My <span class="accent-text">Portfolio</span></h1>
+									<h2>Stacked Sagar</h2>
+									<p class="lead">I'm a <span class="typed" data-typed-items="Full Stack Developer , UI/UX Enthusiast , Web Developer , Problem Solver & Optimizer , Community Contributor">Web Dev</span><span class="typed-cursor" aria-hidden="true"></span></p>
+									<p class="description">Passionate about creating exceptional digital experiences that blend innovative design with functional development.</p>
+
+									<div class="main-profile-actions">
+										<a href="#resume" class="btn btn-primary">View My Work</a>
+										<a href="#contact" class="btn btn-outline">Get In Touch</a>
+									</div>
+
+									<div class="social-links">
+										<a href="https://x.com/StackedSagar" target="_blank" class="twitter"><i class="lni lni-x"></i></a>
+										<a href="https://www.instagram.com/stackedsagar/" target="_blank" class="instagram"><i class="lni lni-instagram"></i></a>
+										<a href="https://stackoverflow.com/users/31287489/sagar-sharma?tab=profile" target="_blank" class="facebook"><i class="lni lni-stackoverflow"></i></a>
+										<a href="https://stackedsagar.blogspot.com/" target="_blank" class="google-plus"><i class="lni lni-blogger"></i></a>
+										<a href="https://www.linkedin.com/in/stackedsagar/" target="_blank" class="linkedin"><i class="lni lni-linkedin"></i></a>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-lg-6 aos-init aos-animate" data-aos="fade-left" data-aos-delay="200">
+								<div class="main-profile-visual">
+									<div class="profile-container">
+										<div class="profile-background"></div>
+										<img src="assets/img/512.png" alt="Stacked Sagar" class="profile-image" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="about" class="about segments">
+				<div class="container aos-init" data-aos="fade-up" data-aos-delay="100">
+					<div class="row">
+						<div class="col-lg-5 aos-init" data-aos="zoom-in" data-aos-delay="200">
+							<div class="profile-card">
+								<div class="profile-header">
+									<div class="profile-image">
+										<img src="assets/img/512.png" alt="Stacked Sagar Profile Image" class="img-fluid" />
+									</div>
+									<div class="profile-badge">
+										<i class="lni lni-check-circle-1"></i>
+									</div>
+								</div>
+
+								<div class="profile-content">
+									<h3>Marcus Thompson</h3>
+									<p class="profession">Creative Director &amp; Developer</p>
+
+									<div class="contact-links">
+										<a href="mailto:codelearnersagar@gmail.com" class="contact-item">
+											<i class="lni lni-envelope-1"></i>
+											codelearnersagar@gmail.com
+										</a>
+										<a href="tel:+91999158254" class="contact-item">
+											<i class="lni lni-phone"></i>
+											+91 999158254
+										</a>
+										<a href="#" class="contact-item">
+											<i class="lni lni-map-marker-1"></i>
+											Delhi, India
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-7 aos-init" data-aos="fade-left" data-aos-delay="300">
+							<div class="about-content">
+								<div class="segments-header">
+									<span class="badge-text">Get to Know Me</span>
+									<h2>👋 Hi, I’m <span class="highlight">Sagar Sharma</span></h2>
+								</div>
+
+								<div class="description">
+									<p>I’m a <strong>Full Stack Developer</strong> with hands-on experience in building <em>modern, scalable applications and websites</em>. I love working at the intersegments of <strong>logic</strong> and <strong>creativity</strong> — solving technical challenges while delivering intuitive and meaningful user experiences.</p>
+								</div>
+
+								<div class="stats-grid">
+									<div class="stat-item">
+										<div class="stat-number">150+</div>
+										<div class="stat-label">Projects Completed</div>
+									</div>
+									<div class="stat-item">
+										<div class="stat-number">5+</div>
+										<div class="stat-label">Years Experience</div>
+									</div>
+									<div class="stat-item">
+										<div class="stat-number">98%</div>
+										<div class="stat-label">Client Satisfaction</div>
+									</div>
+								</div>
+
+								<div class="details-grid">
+									<div class="detail-row">
+										<div class="detail-item">
+											<span class="detail-label">Specialization</span>
+											<span class="detail-value">Full Stack Development &amp; Performance Optimization</span>
+										</div>
+										<div class="detail-item">
+											<span class="detail-label">Experience Level</span>
+											<span class="detail-value">Software Engineer</span>
+										</div>
+									</div>
+									<div class="detail-row">
+										<div class="detail-item">
+											<span class="detail-label">Education</span>
+											<span class="detail-value">Computer Science Engineering (B.Tech)</span>
+										</div>
+										<div class="detail-item">
+											<span class="detail-label">Languages</span>
+											<span class="detail-value">English, Hindi</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="cta-segments">
+									<a href="assets/cv/Sagar Sharma Current CV.pdf" download class="btn btn-primary"><i class="lni lni-download-1"></i> Download Resume </a>
+									<a href="https://www.instagram.com/stackedsagar/" target="_blank" class="btn btn-outline"><i class="lni lni-message-3-text"></i> Let's Talk </a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<segments id="skills" class="skills segments">
+				<div class="container segments-title aos-init" data-aos="fade-up">
+					<h2>Skills & Tech Stack</h2>
+					<p>A versatile toolkit for building modern, scalable applications.</p>
+				</div>
+				<div class="container aos-init" data-aos="fade-up" data-aos-delay="100">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="skills-category aos-init" data-aos="fade-up" data-aos-delay="200">
+								<h3>Front-end Development</h3>
+								<div class="skills-animation">
+									<div class="skill-item">
+										<div class="d-flex justify-content-between align-items-center">
+											<h4>HTML/CSS</h4>
+											<span class="skill-percentage">100%</span>
+										</div>
+										<div class="progress">
+											<div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+										<div class="skill-tooltip">Expert level knowledge of semantic HTML5 and modern CSS3 techniques</div>
+									</div>
+
+									<div class="skill-item">
+										<div class="d-flex justify-content-between align-items-center">
+											<h4>JavaScript</h4>
+											<span class="skill-percentage">85%</span>
+										</div>
+										<div class="progress">
+											<div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+										<div class="skill-tooltip">Strong proficiency in ES6+, DOM manipulation, and modern frameworks</div>
+									</div>
+
+									<div class="skill-item">
+										<div class="d-flex justify-content-between align-items-center">
+											<h4>React</h4>
+											<span class="skill-percentage">80%</span>
+										</div>
+										<div class="progress">
+											<div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+										<div class="skill-tooltip">Experience with React hooks, state management, and component architecture</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-6">
+							<div class="skills-category aos-init" data-aos="fade-up" data-aos-delay="300">
+								<h3>Back-end Development</h3>
+								<div class="skills-animation">
+									<div class="skill-item">
+										<div class="d-flex justify-content-between align-items-center">
+											<h4>.Net</h4>
+											<span class="skill-percentage">75%</span>
+										</div>
+										<div class="progress">
+											<div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+										<div class="skill-tooltip">Server-side backend development with REST APIs, Entity Framework & more...</div>
+									</div>
+
+									<div class="skill-item">
+										<div class="d-flex justify-content-between align-items-center">
+											<h4>C#</h4>
+											<span class="skill-percentage">70%</span>
+										</div>
+										<div class="progress">
+											<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+										<div class="skill-tooltip">C# development with visual studio tools</div>
+									</div>
+
+									<div class="skill-item">
+										<div class="d-flex justify-content-between align-items-center">
+											<h4>SQL</h4>
+											<span class="skill-percentage">85%</span>
+										</div>
+										<div class="progress">
+											<div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+										<div class="skill-tooltip">Database design, optimization, and complex queries</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</segments>
+			<segments id="resume" class="resume segments pt-10">
+				<div class="container segments-title aos-init" data-aos="fade-up">
+					<h2>Resume</h2>
+					<p>I specialize in crafting modern, efficient, and user-friendly applications by combining strong backend logic with engaging frontend design. My work focuses on delivering high-quality solutions that are scalable, secure, and optimized for performance.</p>
+				</div>
+
+				<div class="container aos-init" data-aos="fade-up" data-aos-delay="100">
+					<div class="row gy-4">
+						<div class="col-lg-4">
+							<div class="resume-side aos-init" data-aos="fade-right" data-aos-delay="100">
+								<div class="profile-img mb-4">
+									<img src="assets/img/512.png" alt="Profile" class="img-fluid rounded" />
+								</div>
+								<h3>Professional Summary</h3>
+								<p>Driven by the balance between logic and creativity, I aim to deliver solutions that are not only functional but also intuitive and impactful.</p>
+								<div class="skills-animation mt-4">
+									<h3>Technical Skills</h3>
+									<div class="skill-item">
+										<div class="d-flex justify-content-between">
+											<span>Web Development</span>
+											<span>95%</span>
+										</div>
+										<div class="progress">
+											<div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+
+									<div class="skill-item">
+										<div class="d-flex justify-content-between">
+											<span>SQL Database Optimization</span>
+											<span>85%</span>
+										</div>
+										<div class="progress">
+											<div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+
+									<div class="skill-item">
+										<div class="d-flex justify-content-between">
+											<span>Backend APIs</span>
+											<span>90%</span>
+										</div>
+										<div class="progress">
+											<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+
+									<div class="skill-item">
+										<div class="d-flex justify-content-between">
+											<span>Project Management</span>
+											<span>80%</span>
+										</div>
+										<div class="progress">
+											<div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+
+									<div class="skill-item">
+										<div class="skills-grid">
+											<div class="skill-card">
+												<h3>Programming Languages</h3>
+												<p>C#, VB</p>
+											</div>
+											<div class="skill-card">
+												<h3>Frameworks</h3>
+												<p>.NET, Dapper</p>
+											</div>
+											<div class="skill-card">
+												<h3>Web Technologies</h3>
+												<p>ASP.NET MVC, .NET Core, RESTful API, JavaScript, AJAX, jQuery, CSS, HTML, Bootstrap, Material, Telerik UI, JSON</p>
+											</div>
+											<div class="skill-card">
+												<h3>Databases</h3>
+												<p>SQL Server, SQLite, PostgreSQL, Oracle SQL</p>
+											</div>
+											<div class="skill-card">
+												<h3>Other Tools</h3>
+												<p>TFS, Git Client, SonarQube, Splunk, Okta, Fiddler, Postman</p>
+											</div>
+											<div class="skill-card">
+												<h3>Methodologies</h3>
+												<p>3-Tier Architecture, Agile, Waterfall</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-8 ps-4 ps-lg-5">
+							<div class="resume-segments aos-init" data-aos="fade-up">
+								<h3><i class="bi bi-briefcase me-2"></i>Professional Experience</h3>
+
+								<div class="resume-item">
+									<h4>Senior Software Engineer</h4>
+									<h5>2023 - Present</h5>
+									<p class="company"><i class="bi bi-building"></i> Nagarro Enterprise Services Pvt. Ltd.</p>
+									<ul>
+										<li>Developed and maintaining application using MVC architecture.</li>
+										<li>Developed Rest APIs, Modules, .Net Core APIs.</li>
+										<li>Involved in writing Unit Tests using NUnit, XUnit, MSUnit, Moq.</li>
+										<li>Involved in writing AWS Lambdas, Stencil components, Procedures.</li>
+										<li>Used tools like Visual Studio, SQL, PG SQL, VS Code, Postman, Git Client etc, Aws Tool kit, Splunk.</li>
+									</ul>
+								</div>
+
+								<div class="resume-item">
+									<h4>Senior Software Engineer</h4>
+									<h5>2022 - 2023</h5>
+									<p class="company"><i class="bi bi-building"></i> Nagarro Enterprise Services Pvt. Ltd.</p>
+									<ul>
+										<li>Developed and maintaining application using MVC architecture.</li>
+										<li>Developed Rest APIs, Modules, .Net Core APIs.</li>
+										<li>Involved in writing Unit Tests using NUnit, XUnit, MSUnit, Moq.</li>
+										<li>Involved in writing AWS Lambdas, Stencil components, Procedures.</li>
+										<li>Used tools like Visual Studio, SQL, PG SQL, VS Code, Postman, Git Client etc, Aws Tool kit, Splunk.</li>
+									</ul>
+								</div>
+
+								<div class="resume-item">
+									<h4>Software Engineer</h4>
+									<h5>2020 - 2022</h5>
+									<p class="company"><i class="bi bi-building"></i> Key Ideas Inc.</p>
+									<ul>
+										<li>Developed and maintaining application using Asp.net Web forms (C#, VB.net), Converting Asp.net Web forms module to Asp.net MVC.</li>
+										<li>Involved in writing Stored Procedures and functions in SQL.</li>
+										<li>Implementing task and quick problem solving and delivering.</li>
+										<li>Used tools like Visual Studio, SQL, PG SQL, VS Code, Postman, Git Client etc, Aws Tool kit, Splunk.</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="resume-segments aos-init" data-aos="fade-up" data-aos-delay="100">
+								<h3><i class="bi bi-mortarboard me-2"></i>Education</h3>
+
+								<div class="resume-item">
+									<h4>B. Tech (Computer Science) in Software Engineering</h4>
+									<h5>2012 - 2016</h5>
+									<p class="company"><i class="bi bi-building"></i> Manav Rachna International University</p>
+								</div>
+								<div class="resume-item">
+									<h4>12th Standard - CBSC Board</h4>
+									<h5>2009 - 2010</h5>
+									<p class="company"><i class="bi bi-building"></i> Lilawati vidya mandir sr. sec . school</p>
+								</div>
+							</div>
+
+							<!-- Work Experience segments -->
+							<div class="resume-segments aos-init" data-aos="fade-up" data-aos-delay="200">
+								<h3><i class="bi bi-award me-2"></i>Certifications</h3>
+
+								<div class="resume-item">
+									<h4>Software Architecture</h4>
+									<h5>Breaking a Monolith into Microservices & Microservices Foundations</h5>
+								</div>
+								<div class="resume-item">
+									<h4>Javascript (Basic & Intermediate)</h4>
+									<h5>Hacker Rank - Certifications</h5>
+								</div>
+								<div class="resume-item">
+									<h4>SQL (Basic, Intermediate & Advanced)</h4>
+									<h5>Hacker Rank - Certifications</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</segments>
+			<segments id="services" class="services segments">
+				<div class="container segments-title aos-init" data-aos="fade-up">
+					<h2>Services</h2>
+					<p>I help businesses and individuals transform ideas into scalable, modern, and user-friendly digital solutions. Here’s how I can add value:</p>
+				</div>
+				<div class="container aos-init" data-aos="fade-up" data-aos-delay="100">
+					<div class="service-header">
+						<div class="row align-items-center">
+							<div class="col-lg-8 col-md-12">
+								<div class="service-intro">
+									<h2 class="service-heading">
+										<div>Services &</div>
+										<div><span>Expertise</span></div>
+									</h2>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-12">
+								<div class="service-summary">
+									<p>I offer end-to-end solutions that bring ideas to life — from building robust applications to designing seamless user experiences and optimizing performance.</p>
+									<a href="service.html" class="service-btn">
+										View All Services
+										<i class="lni lni-arrow-right"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row justify-content-center">
+						<div class="col-lg-4 col-md-6 aos-init" data-aos="fade-up" data-aos-delay="100">
+							<div class="service-card position-relative z-1">
+								<div class="service-icon">
+									<i class="lni lni-monitor-code"></i>
+								</div>
+								<a href="service.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
+									<i class="lni lni-arrow-angular-top-right"></i>
+								</a>
+								<h3>
+									<a href="service.html">Full Stack <span>Development</span> </a>
+								</h3>
+								<p>Complete web application development from backend logic to frontend design, ensuring scalability and security.</p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 aos-init" data-aos="fade-up" data-aos-delay="200">
+							<div class="service-card position-relative z-1">
+								<div class="service-icon">
+									<i class="lni lni-colour-palette-3"></i>
+								</div>
+								<a href="service.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
+									<i class="lni lni-arrow-angular-top-right"></i>
+								</a>
+								<h3>
+									<a href="service.html"> UI/UX <span>Design</span> </a>
+								</h3>
+								<p>Creating clean, responsive, and user-friendly interfaces that provide an intuitive experience across devices.</p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 aos-init" data-aos="fade-up" data-aos-delay="300">
+							<div class="service-card position-relative z-1">
+								<div class="service-icon">
+									<i class="lni lni-cloud-bolt-2"></i>
+								</div>
+								<a href="service.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
+									<i class="lni lni-arrow-angular-top-right"></i>
+								</a>
+								<h3>
+									<a href="service.html"> Performance <span>Optimization</span> </a>
+								</h3>
+								<p>Improving application speed and efficiency by identifying bottlenecks and implementing best practices.</p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 aos-init" data-aos="fade-up" data-aos-delay="100">
+							<div class="service-card position-relative z-1">
+								<div class="service-icon">
+									<i class="lni lni-hand-shake"></i>
+								</div>
+								<a href="service.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
+									<i class="lni lni-arrow-angular-top-right"></i>
+								</a>
+								<h3>
+									<a href="service.html"> Consultation & <span>Strategy</span> </a>
+								</h3>
+								<p>Helping businesses choose the right tech stack, refine workflows, and align development with business goals.</p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 aos-init" data-aos="fade-up" data-aos-delay="200">
+							<div class="service-card position-relative z-1">
+								<div class="service-icon">
+									<i class="lni lni-cloud-refresh-clockwise"></i>
+								</div>
+								<a href="service.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
+									<i class="lni lni-arrow-angular-top-right"></i>
+								</a>
+								<h3>
+									<a href="service.html"> API & <span>Integration</span> </a>
+								</h3>
+								<p>Designing and integrating RESTful APIs, third-party services, and cloud solutions for seamless functionality.</p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 aos-init" data-aos="fade-up" data-aos-delay="300">
+							<div class="service-card position-relative z-1">
+								<div class="service-icon">
+									<i class="lni lni-bar-chart-dollar"></i>
+								</div>
+								<a href="service.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
+									<i class="lni lni-arrow-angular-top-right"></i>
+								</a>
+								<h3>
+									<a href="service.html"> Scalable <span>Architecture</span> </a>
+								</h3>
+								<p>Building applications with clean, modular architecture to support growth, scalability, and maintainability.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</segments>
+			<segments id="contact" class="contact segments">
+				<div class="container segments-title aos-init" data-aos="fade-up">
+					<h2>Contact</h2>
+					<p>Have a project in mind or want to collaborate? Feel free to reach out — I’d love to hear from you!</p>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="info-box">
+							<h3>Contact Info</h3>
+							<p>I’m just a message away — feel free to reach out.</p>
+							<div class="info-item">
+								<div class="icon-box">
+									<i class="lni lni-phone"></i>
+								</div>
+								<div class="content">
+									<h4>Phone Number</h4>
+									<p>+91 9999158254</p>
+								</div>
+							</div>
+
+							<div class="info-item">
+								<div class="icon-box">
+									<i class="lni lni-envelope-1"></i>
+								</div>
+								<div class="content">
+									<h4>Email Address</h4>
+									<p><a href="mailto:codelearnersagar@gmail.com">codelearnersagar@gmail.com</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</segments>
+		</div>
+
+		<!-- Main Header End -->
+		<footer id="footer" class="footer position-relative">
+			<div class="container">
+				<div class="copyright text-center">
+					<p>© <span>Copyright</span> <strong class="px-1 sitename">Stacked Sagar</strong> <span>All Rights Reserved</span></p>
+				</div>
+			</div>
+		</footer>
+		<!-- Back to Top Button Start -->
+		<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+		<!-- Back to Top Button End -->
+		<!-- Script Start -->
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/3.0.0/noframework.waypoints.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
+		<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+		<script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<!-- Script End -->
+	</body>
 </html>
