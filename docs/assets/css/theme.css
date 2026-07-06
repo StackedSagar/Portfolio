@@ -36,6 +36,44 @@
 	color: var(--contrast-color);
 }
 
+.skip-link {
+	position: absolute;
+	top: 0;
+	left: -9999px;
+	z-index: 10000;
+	padding: 0.75rem 1rem;
+	background: var(--accent-color);
+	color: var(--contrast-color);
+	border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.skip-link:focus {
+	left: 1rem;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.sections,
+.service-details {
+	scroll-margin-top: 24px;
+}
+
+.header-toggle {
+	border: 0;
+	padding: 0;
+}
+
+.header-toggle:focus-visible,
+.navmenu a:focus-visible,
+.btn:focus-visible {
+	outline: 2px solid var(--nav-hover-color);
+	outline-offset: 3px;
+}
+
 -webkit-::selection {
 	background-color: var(--default-color);
 	color: var(--contrast-color);
