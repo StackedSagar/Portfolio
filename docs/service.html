@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="author" content="Stacked Sagar" />
-		<meta name="description" content="" />
+		<meta name="description" content="Detailed service page for Sagar Sharma's full-stack web development and integration offerings." />
 		<title>Stacked Sagar | Portfolio - Service Details</title>
 		<!-- FavIcon -->
 		<link rel="shortcut icon" href="assets/img/favicon.ico" type="image/ico" />
@@ -22,9 +22,10 @@
 		<!-- Stylesheets End-->
 	</head>
 	<body class="service-details-page">
-		<div id="preloader"></div>
+		<a class="skip-link" href="#main-content">Skip to main content</a>
+		<div class="preloader" aria-hidden="true"></div>
 		<div id="header" class="header dark-background d-flex flex-column justify-content-center">
-			<i class="header-toggle d-xl-none lni lni-menu-hamburger-1"></i>
+			<button class="header-toggle d-xl-none lni lni-menu-hamburger-1" type="button" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation"></button>
 			<div class="header-container d-flex flex-column align-items-start">
 				<nav id="navmenu" class="navmenu">
 					<ul>
@@ -58,7 +59,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="main">
+		<div id="main-content" class="main" tabindex="-1">
 			<div class="page-title dark-background">
 				<div class="container d-lg-flex justify-content-between align-items-center">
 					<h1 class="mb-2 mb-lg-0">Service Details</h1>
@@ -70,7 +71,7 @@
 					</nav>
 				</div>
 			</div>
-			<segments id="service-details" class="service-details segments">
+			<section id="service-details" class="service-details segments">
 				<div class="container" data-aos="fade-up" data-aos-delay="100">
 					<div class="row gy-4 p-3">
 						<!-- Left Content -->
@@ -180,7 +181,7 @@
 						</div>
 					</div>
 				</div>
-			</segments>
+			</section>
 		</div>
 
 		<footer id="footer" class="footer position-relative">

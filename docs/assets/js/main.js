@@ -1,5 +1,4 @@
 $(document).ready(() => {
-	// Initialize AOS.js for dynamic animation on scroll
 	AOS.init({
 		duration: 600,
 		easing: 'ease-in-out',
@@ -7,48 +6,55 @@ $(document).ready(() => {
 		mirror: false,
 	});
 
-	// Initialize pureCounter for statistics counters
-	// Ensure PureCounter is loaded before using it
-	new PureCounter();
-
-	// Initialize Scroll to top window scroll behavior
-	let scrollTop = document.querySelector('.scroll-top');
-
-	function toggleScrollTop() {
-		if (scrollTop) {
-			window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
-		}
+	if (window.PureCounter) {
+		new PureCounter();
 	}
 
-	// Toggle scroll top button visibility
+	const scrollTop = document.querySelector('.scroll-top');
+	const header = document.getElementById('header');
+	const toggleButton = document.querySelector('.header-toggle');
+	const navLinks = document.querySelectorAll('.navmenu a');
+
+	function toggleScrollTop() {
+		if (!scrollTop) return;
+		scrollTop.classList.toggle('active', window.scrollY > 100);
+	}
+
+	function setMobileNavState(isOpen) {
+		if (!header || !toggleButton) return;
+		header.classList.toggle('header-show', isOpen);
+		toggleButton.setAttribute('aria-expanded', String(isOpen));
+		toggleButton.classList.toggle('lni-menu-hamburger-1', !isOpen);
+		toggleButton.classList.toggle('lni-xmark', isOpen);
+	}
+
 	window.addEventListener('load', toggleScrollTop);
 	document.addEventListener('scroll', toggleScrollTop);
 
-	// Toggle header visibility on mobile
-	$('.header-toggle').on('click', () => {
-		$('#header').toggleClass('header-show');
-		$('.header-toggle').toggleClass('lni-menu-hamburger-1 lni-xmark');
+	toggleButton?.addEventListener('click', () => {
+		setMobileNavState(!header?.classList.contains('header-show'));
 	});
 
-	$(document).on('#navmenu a', 'click', () => {
-		if ($('.header-show')) {
-			headerToggle();
-		}
+	navLinks.forEach((link) => {
+		link.addEventListener('click', () => {
+			if (window.innerWidth < 1200) {
+				setMobileNavState(false);
+			}
+		});
 	});
 
-	$('.scroll-top').on('click', () => {
+	$('.scroll-top').on('click', (event) => {
+		event.preventDefault();
 		window.scrollTo({
 			top: 0,
 			behavior: 'smooth',
 		});
 	});
 
-	//Initialize Typed.js for dynamic text typing effect
 	if ($('.typed').length) {
-		var typed_strings = $('.typed').data('typed-items');
-		typed_strings = typed_strings.split(',');
+		const typedStrings = $('.typed').data('typed-items').split(',');
 		new Typed('.typed', {
-			strings: typed_strings,
+			strings: typedStrings,
 			loop: true,
 			typeSpeed: 100,
 			backSpeed: 50,
@@ -56,30 +62,28 @@ $(document).ready(() => {
 		});
 	}
 
-	//Initialize Progress Bar Animation on Scroll
 	$('.skills-animation').each(function () {
-		var $item = $(this);
+		const $item = $(this);
 		new Waypoint({
 			element: this,
 			offset: '80%',
 			handler: function () {
 				$item.find('.progress .progress-bar').each(function () {
-					var $el = $(this);
+					const $el = $(this);
 					$el.css('width', $el.attr('aria-valuenow') + '%');
 				});
 			},
 		});
 	});
 
-	//Correct scrolling position upon page load for URLs containing hash links.
-	window.addEventListener('load', function (e) {
+	window.addEventListener('load', function () {
 		if (window.location.hash) {
-			if (document.querySelector(window.location.hash)) {
+			const target = document.querySelector(window.location.hash);
+			if (target) {
 				setTimeout(() => {
-					let section = document.querySelector(window.location.hash);
-					let scrollMarginTop = getComputedStyle(section).scrollMarginTop;
+					const scrollMarginTop = parseInt(getComputedStyle(target).scrollMarginTop, 10) || 0;
 					window.scrollTo({
-						top: section.offsetTop - parseInt(scrollMarginTop),
+						top: target.offsetTop - scrollMarginTop,
 						behavior: 'smooth',
 					});
 				}, 100);
@@ -87,15 +91,13 @@ $(document).ready(() => {
 		}
 	});
 
-	// Navmenu Scrollspy
-	let navmenulinks = document.querySelectorAll('.navmenu a');
-
+	const navmenuLinks = document.querySelectorAll('.navmenu a');
 	function navmenuScrollspy() {
-		navmenulinks.forEach((navmenulink) => {
+		navmenuLinks.forEach((navmenulink) => {
 			if (!navmenulink.hash) return;
-			let section = document.querySelector(navmenulink.hash);
+			const section = document.querySelector(navmenulink.hash);
 			if (!section) return;
-			let position = window.scrollY + 200;
+			const position = window.scrollY + 200;
 			if (position >= section.offsetTop && position <= section.offsetTop + section.offsetHeight) {
 				document.querySelectorAll('.navmenu a.active').forEach((link) => link.classList.remove('active'));
 				navmenulink.classList.add('active');
@@ -107,8 +109,7 @@ $(document).ready(() => {
 	window.addEventListener('load', navmenuScrollspy);
 	document.addEventListener('scroll', navmenuScrollspy);
 
-	//Preloader
-	const preloader = document.querySelector('.preloader');
+	const preloader = document.querySelector('.preloader, #preloader');
 	if (preloader) {
 		window.addEventListener('load', () => {
 			preloader.remove();

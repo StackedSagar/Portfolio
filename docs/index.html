@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="author" content="Stacked Sagar" />
-		<meta name="description" content="" />
+		<meta name="description" content="Portfolio of Sagar Sharma, featuring full-stack development, UI/UX work, services, and contact information." />
 		<title>Stacked Sagar | Portfolio</title>
 
 		<!-- FavIcon -->
@@ -23,12 +23,13 @@
 		<!-- Stylesheets End-->
 	</head>
 	<body class="index-page" data-aos-easing="ease-in-out" data-aos-duration="600" data-aos-delay="0">
+		<a class="skip-link" href="#main-content">Skip to main content</a>
 		<!-- PreLoader -->
-		<div class="preloader"></div>
+		<div class="preloader" aria-hidden="true"></div>
 
 		<!--Main Header Start -->
 		<div id="header" class="header dark-background d-flex flex-column justify-content-center">
-			<i class="header-toggle d-xl-none lni lni-menu-hamburger-1"></i>
+			<button class="header-toggle d-xl-none lni lni-menu-hamburger-1" type="button" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation"></button>
 			<div class="header-container d-flex flex-column align-items-start">
 				<nav id="navmenu" class="navmenu">
 					<ul>
@@ -61,7 +62,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="main">
+		<div id="main-content" class="main" tabindex="-1">
 			<div id="main-profile" class="main-profile segments">
 				<div class="background-elements">
 					<div class="bg-circle circle-1"></div>
@@ -96,7 +97,7 @@
 								<div class="main-profile-visual">
 									<div class="profile-container">
 										<div class="profile-background"></div>
-										<img src="assets/img/512.png" alt="Stacked Sagar" class="profile-image" />
+										<img src="assets/img/512.png" alt="Stacked Sagar" class="profile-image" loading="lazy" />
 									</div>
 								</div>
 							</div>
@@ -111,7 +112,7 @@
 							<div class="profile-card">
 								<div class="profile-header">
 									<div class="profile-image">
-										<img src="assets/img/512.png" alt="Stacked Sagar Profile Image" class="img-fluid" />
+										<img src="assets/img/512.png" alt="Stacked Sagar Profile Image" class="img-fluid" loading="lazy" />
 									</div>
 									<div class="profile-badge">
 										<i class="lni lni-check-circle-1"></i>
@@ -198,7 +199,7 @@
 					</div>
 				</div>
 			</div>
-			<segments id="skills" class="skills segments">
+			<section id="skills" class="skills segments">
 				<div class="container segments-title aos-init" data-aos="fade-up">
 					<h2>Skills & Tech Stack</h2>
 					<p>A versatile toolkit for building modern, scalable applications.</p>
@@ -286,8 +287,8 @@
 						</div>
 					</div>
 				</div>
-			</segments>
-			<segments id="resume" class="resume segments pt-10">
+			</section>
+			<section id="resume" class="resume segments pt-10">
 				<div class="container segments-title aos-init" data-aos="fade-up">
 					<h2>Resume</h2>
 					<p>I specialize in crafting modern, efficient, and user-friendly applications by combining strong backend logic with engaging frontend design. My work focuses on delivering high-quality solutions that are scalable, secure, and optimized for performance.</p>
@@ -454,8 +455,8 @@
 						</div>
 					</div>
 				</div>
-			</segments>
-			<segments id="services" class="services segments">
+			</section>
+			<section id="services" class="services segments">
 				<div class="container segments-title aos-init" data-aos="fade-up">
 					<h2>Services</h2>
 					<p>I help businesses and individuals transform ideas into scalable, modern, and user-friendly digital solutions. Here’s how I can add value:</p>
@@ -570,8 +571,8 @@
 						</div>
 					</div>
 				</div>
-			</segments>
-			<segments id="contact" class="contact segments">
+			</section>
+			<section id="contact" class="contact segments">
 				<div class="container segments-title aos-init" data-aos="fade-up">
 					<h2>Contact</h2>
 					<p>Have a project in mind or want to collaborate? Feel free to reach out — I’d love to hear from you!</p>
@@ -603,7 +604,7 @@
 						</div>
 					</div>
 				</div>
-			</segments>
+			</section>
 		</div>
 
 		<!-- Main Header End -->

@@ -1,86 +1,70 @@
-
 # 🚀 Dynamic Personal Portfolio Website
 
-This is my personal portfolio website, a dynamic and interactive single-page application built with modern web technologies. It showcases my skills, projects, and professional background, and provides an easy way for visitors to connect with me.
+This repository contains a polished personal portfolio website built as a responsive, interactive landing page for showcasing professional experience, services, and contact information.
 
-**Live Demo:** [https://stackedsagar.github.io/Portfolio/docs/](https://stackedsagar.github.io/Portfolio/docs/)
+**Live Demo:** [https://stackedsagar.github.io/Portfolio/](https://stackedsagar.github.io/Portfolio/)
 
 ---
 
-## ✨ Features
+## ✨ Highlights
 
-* **Single-Page Design:** Smooth-scrolling navigation to all sections from a single page.
-* **Fully Responsive:** Optimized for a seamless experience on desktops, tablets, and mobile devices.
-* **Interactive UI:** Engaging animations and effects, including:
-  * On-scroll animations powered by **AOS.js**.
-  * A dynamic "typed" text effect with **Typed.js**.
-  * Animated skill bars and counters that activate on scroll.
-  * Interactive carousels and sliders with **Swiper.js**.
-* **Service Details Page:** A dedicated page to provide more information about services offered.
-* **Easy to Customize:** Clean and well-structured code makes it simple to update content.
+- Responsive single-page layout with smooth scrolling and section-based navigation
+- Modern visual design with animated sections, typed text, counters, and progress bars
+- Dedicated service details page for extended content
+- Improved accessibility with a skip link, keyboard focus states, and better mobile navigation behavior
+- Easy-to-update content for personal branding and contact details
 
 ---
 
 ## 🛠️ Technologies Used
 
-* **Frontend:** HTML5, CSS3, JavaScript (ES6+)
-* **Frameworks & Libraries:**
-  * [Bootstrap 5](https://getbootstrap.com/): For responsive layout and components.
-  * [jQuery](https://jquery.com/): For simplified DOM manipulation and event handling.
-  * [AOS](https://michalsnik.github.io/aos/): For scroll animations.
-  * [Swiper.js](https://swiperjs.com/): For touch-enabled sliders and carousels.
-  * [Typed.js](https://github.com/mattboldt/typed.js/): For the typing animation.
-  * [PureCounter](https://github.com/srexi/purecounterjs): For animated number counters.
-  * [GLightbox](https://biati-digital.github.io/glightbox/): For an elegant lightbox for images and videos.
-* **Deployment:** [GitHub Pages](https://pages.github.com/)
+- **Frontend:** HTML5, CSS3, JavaScript (ES6+)
+- **UI & Layout:** Bootstrap 5
+- **Animation & Interaction:** AOS, Swiper, Typed.js, PureCounter
+- **Deployment:** GitHub Pages
 
 ---
 
 ## 📂 Project Structure
 
-```
+```text
 docs/
-│
-├── index.html              # Main single-page layout
+├── index.html              # Main portfolio page
 ├── service.html            # Service details page
-│
 ├── assets/
 │   ├── css/
 │   │   └── theme.css       # Main stylesheet
-│   │
 │   ├── js/
-│   │   └── main.js         # Core JavaScript logic
-│   │
-│   └── img/                # Images, logos, and other assets
-│
-└── README.md               # This file
+│   │   └── main.js         # Core JavaScript behavior
+│   └── img/                # Images and visual assets
+└── README.md               # Project documentation
 ```
 
 ---
 
-## 🔧 How to Use
+## 🔧 Local Development
 
-1. **Clone the repository:**
+1. Clone the repository:
    ```bash
    git clone https://github.com/StackedSagar/Portfolio.git
    ```
-2. **Navigate to the project directory:**
+2. Open the project folder:
    ```bash
    cd Portfolio/docs
    ```
-3. Open `index.html` in your browser to view the website locally.
-4. Customize the content by editing `index.html` and `service.html` with your personal information, projects, and skills.
-5. Replace the images in the `assets/img/` folder with your own.
+3. Open [docs/index.html](docs/index.html) in a browser to preview the site locally.
+4. Edit [docs/index.html](docs/index.html) and [docs/service.html](docs/service.html) to update your content.
+5. Replace assets in [docs/assets/img](docs/assets/img) as needed.
 
 ---
 
 ## 🌍 Deployment on GitHub Pages
 
-1. Push your changes to the `main` branch of your GitHub repository.
-2. In your repository settings, navigate to the **Pages** tab.
-3. Under the "Build and deployment" section, select **GitHub Actions** as the source. If you prefer not to use actions, you can deploy from a branch. Select the `main` branch and the `/docs` folder as the source.
-4. Save your changes. Your portfolio will be live at
+1. Push changes to the main branch.
+2. Open the repository settings and go to the Pages section.
+3. Set the source to the docs folder (or GitHub Actions if preferred).
+4. Your site will be available at:
 
-```
-https://StackedSagar.github.io/portfolio/
+```text
+https://stackedsagar.github.io/Portfolio/
 ```
